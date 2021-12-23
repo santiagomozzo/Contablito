@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Transacciones</title>
+</head>
+
+<body>
+    <nav class="site-header sticky-top py-1 bg-info">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="btn btn-secondary btn-lg" href="index.html">Inicio</a>
+            <a class="btn btn-secondary btn-lg" href="mov-register.html">Registro de Movimientos</a>
+            <a class="btn btn-secondary btn-lg" href="product-register.html">Registro de Productos</a>
+        </div>
+    </nav>
+    <div class="container-sm bg-light">
+        <form id="form">
+            <h1 class="text-center">Transacciones</h1>
+            <label for="Descripción">Descripción:</label>
+            <input class="form-control" type="text" id="descripcion">
+            <br>
+            <label for="Tipo de transacción">Tipo de transacción:</label>
+            <input type="radio" name="transaccion" id="compra" value="Compra" required> Compra
+            <input type="radio" name="transaccion" id="venta" value="Venta"> Venta
+            <br><br>
+            <label for="Tipo de IVA">Tipo de IVA:</label>
+            <input type="radio" name="iva" id="basico" value="0.22" required> Basico
+            <input type="radio" name="iva" id="minimo" value="0.10"> Minimo
+            <input type="radio" name="iva" id="excento" value="0.0"> Excento
+            <br><br>
+            <label for="Fecha">Fecha:</label>
+            <input class="form-control" type="date" name="Fecha" id="fecha">
+            <br>
+            <label for="subtotal">Subtotal ($):</label>
+            <input class="form-control" type="number" id="subtotal">
+            <br>
+            <input class="btn btn-primary" type="submit" id="ingresar" value="Ingresar">
+        </form>
+        <br><br><br><br>
+        <table id="table" class="table table-striped">
+            <tr>
+                <td>Descripción</td>
+                <td>Tipo</td>
+                <td>Subtotal ($)</td>
+                <td>IVA ($)</td>
+                <td>Total (IVA inc)</td>
+                <td>Fecha</td>
+            </tr>
+        </table>
+    </div>
+<br><br><br>
+</body>
+<script src="js/transaction.js"></script>
+
+</html>
